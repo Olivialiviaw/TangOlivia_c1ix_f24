@@ -63,8 +63,8 @@
         }
 
         input::placeholder {
-            color: black; /* 将占位符的文字颜色改为黑色 */
-            opacity: 0.8; /* 控制占位符的透明度 */
+            color: black;
+            opacity: 0.8; 
         }
 
         .submit-button {
@@ -84,8 +84,6 @@
             align-items: center;
             text-align: center;
         }
-
-        /* 左上角的图标 */
         .top-left-icon {
             position: absolute;
             top: 10px;
@@ -93,10 +91,8 @@
             width: 50px;
             height: auto;
             cursor: pointer;
-            animation: spin 5s linear infinite; /* 添加旋转动画 */
+            animation: spin 5s linear infinite; 
         }
-
-        /* 旋转动画的 keyframes */
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -108,21 +104,15 @@
     </style>
 </head>
 <body>
-    <!-- 左上角图片，点击后跳转 -->
     <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/index/index.html" target="_blank">
         <img src="22.png" alt="Top Left Icon" class="top-left-icon">
     </a>
-
-    <!-- Main Title and form -->
     <div class="center-content">
         <h1>I Ching the Flower of Life</h1>
-
-        <!-- Form for date and lucky number -->
         <div class="form-container">
             <div class="input-box">
                 <label for="day" style="color: black;">Day:</label>
                 <select id="day">
-                    <!-- Options for day: 1 to 31 -->
                     <script>
                         for (let i = 1; i <= 31; i++) {
                             document.write('<option value="' + i + '">' + i + '</option>');
@@ -132,7 +122,6 @@
 
                 <label for="month" style="color: black;">Month:</label>
                 <select id="month">
-                    <!-- Options for month: 1 to 12 -->
                     <script>
                         for (let i = 1; i <= 12; i++) {
                             document.write('<option value="' + i + '">' + i + '</option>');
