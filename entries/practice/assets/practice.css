@@ -1,0 +1,21 @@
+body{
+    background-color: aquamarine; 
+    border: 5px dotted white;
+}
+    
+h1{
+    font-family: fantasy;
+    color: rgb(114, 198, 229); 
+    font-size: 100pxds; 
+    padding: 100px 50px 100px 50px; 
+    text-align: center; 
+    margin-top: 200px; 
+}
+
+p{
+    color: rgb(114, 114, 114);
+}
+
+.test{
+    color: rgb(130, 224, 248);
+}
