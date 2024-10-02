@@ -3,89 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Ching the Flower of Life</title>
+    <title>I Ching Fortune-telling</title>
     <style>
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Georgia', serif; 
-            background: linear-gradient(135deg, #ffdde1, #d4fc79, #e0c3fc);
-            background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
+            font-family: Georgia, serif;
+            background: linear-gradient(to bottom, #87CEEB, #FFFFFF); 
+            position: relative;
             text-align: center;
-            color: white;
+            color: #fff; 
             height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             overflow: hidden;
-        }
-
-        @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        h1 {
-            margin-top: 100px;
-            margin-bottom: 20px;
-            font-size: 3rem;
-        }
-
-        .form-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin: 40px 0;
-        }
-
-        .input-box {
-            background-color: rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.2rem;
-            color: black; 
-        }
-
-        select, input {
-            border: none;
-            background: transparent;
-            color: black;
-            outline: none;
-            font-size: 1rem;
-            appearance: none;
-            font-family: 'Georgia', serif; 
-        }
-
-        input::placeholder {
-            color: black; /* 将占位符的文字颜色改为黑色 */
-            opacity: 0.8; /* 控制占位符的透明度 */
-        }
-
-        .submit-button {
-            background-color: rgba(255, 255, 255, 0.3);
-            border: none;
-            padding: 10px;
-            border-radius: 50%;
-            cursor: pointer;
-            color: white;
-            font-family: 'Georgia', serif; 
-        }
-
-        .center-content {
+            margin: 0;
             display: flex;
             flex-direction: column;
-            justify-content: center;
             align-items: center;
-            text-align: center;
+            justify-content: center;
         }
 
-        /* 左上角的图标 */
+        .title {
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .instruction {
+            font-size: 1em;
+            margin-bottom: 20px;
+        }
+
+        #coin {
+            width: 200px;
+            height: 200px;
+            background: url('未命名作品 35.png') no-repeat center center;
+            background-size: contain;
+            transform-origin: center;
+            transition: transform 0.1s ease-out;
+        }
+
+       
         .top-left-icon {
             position: absolute;
             top: 10px;
@@ -93,10 +47,10 @@
             width: 50px;
             height: auto;
             cursor: pointer;
-            animation: spin 5s linear infinite; /* 添加旋转动画 */
+            animation: spin 5s linear infinite; 
         }
 
-        /* 旋转动画的 keyframes */
+       
         @keyframes spin {
             0% {
                 transform: rotate(0deg);
@@ -108,49 +62,35 @@
     </style>
 </head>
 <body>
-    <!-- 左上角图片，点击后跳转 -->
-    <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry1/entry1.html" target="_blank">
+    
+    <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/index/index.html" target="_blank">
         <img src="22.png" alt="Top Left Icon" class="top-left-icon">
     </a>
 
-    <!-- Main Title and form -->
-    <div class="center-content">
-        <h1>I Ching the Flower of Life</h1>
+    
+    <div class="title">I Ching Fortune-telling</div>
+    <div class="instruction">Please click on the coin</div>
+    <div id="coin"></div>
 
-        <!-- Form for date and lucky number -->
-        <div class="form-container">
-            <div class="input-box">
-                <label for="day" style="color: black;">Day:</label>
-                <select id="day">
-                    <!-- Options for day: 1 to 31 -->
-                    <script>
-                        for (let i = 1; i <= 31; i++) {
-                            document.write('<option value="' + i + '">' + i + '</option>');
-                        }
-                    </script>
-                </select>
+    <script>
+        const coin = document.getElementById('coin');
 
-                <label for="month" style="color: black;">Month:</label>
-                <select id="month">
-                    <!-- Options for month: 1 to 12 -->
-                    <script>
-                        for (let i = 1; i <= 12; i++) {
-                            document.write('<option value="' + i + '">' + i + '</option>');
-                        }
-                    </script>
-                </select>
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
 
-                <label for="year" style="color: black;">Year:</label>
-                <input type="number" id="year">
-                <button class="submit-button">✔</button>
-            </div>
+            
+            const xRatio = (clientX / innerWidth) - 0.5;
+            const yRatio = (clientY / innerHeight) - 0.5;
 
-            <div class="input-box">
-                <label for="lucky-number" style="color: black;">Lucky number:</label>
-                <input type="number" id="lucky-number" placeholder="1-100">
-                <button class="submit-button">✔</button>
-            </div>
-        </div>
-    </div>
+           
+            const rotateX = yRatio * 360; 
+            const rotateY = -xRatio * 360; 
+
+            coin.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+    </script>
 </body>
 </html>
+
+
