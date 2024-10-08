@@ -4,70 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Ching Fortune-telling</title>
-    <style>
-        body {
-            font-family: Georgia, serif;
-            background: linear-gradient(to bottom, #87CEEB, #FFFFFF); 
-            position: relative;
-            text-align: center;
-            color: #fff; 
-            height: 100vh;
-            overflow: hidden;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .title {
-            font-size: 2em;
-            margin-bottom: 20px;
-        }
-
-        .instruction {
-            font-size: 1em;
-            margin-bottom: 20px;
-        }
-
-        #coin {
-            width: 200px;
-            height: 200px;
-            background: url('未命名作品 35.png') no-repeat center center;
-            background-size: contain;
-            transform-origin: center;
-            transition: transform 0.1s ease-out;
-        }
-
-       
-        .top-left-icon {
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            width: 50px;
-            height: auto;
-            cursor: pointer;
-            animation: spin 5s linear infinite; 
-        }
-
-       
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="/Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry2/assets/entry2.css"> 
 </head>
 <body>
     
     <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/index/index.html" target="_blank">
-        <img src="22.png" alt="Top Left Icon" class="top-left-icon">
+        <img src="/Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry2/assets/22.png" alt="Top Left Icon" class="top-left-icon">
     </a>
 
-    
     <div class="title">I Ching Fortune-telling</div>
     <div class="instruction">Please click on the coin</div>
     <div id="coin"></div>
@@ -79,11 +23,9 @@
             const { clientX, clientY } = e;
             const { innerWidth, innerHeight } = window;
 
-            
             const xRatio = (clientX / innerWidth) - 0.5;
             const yRatio = (clientY / innerHeight) - 0.5;
 
-           
             const rotateX = yRatio * 360; 
             const rotateY = -xRatio * 360; 
 
@@ -92,5 +34,4 @@
     </script>
 </body>
 </html>
-
 
