@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="assets/22.png" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Ching Fortune-telling</title>
+    <link rel="stylesheet" href="/Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry2/assets/entry2.css"> 
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="assets/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/index.html" target="_blank">
+        <img src="assets/22.png" alt="Top Left Icon" class="top-left-icon">
+    </a>
+    <div class="title">I Ching Fortune-telling</div>
+    <div class="instruction">Please click on the coin</div>
+    <div id="coin" class="coin">
+        <img src="assets/coin.png" alt="Coin Image" width="200" height="200">
+    </div>
+
+    <div class="instruction">You will see real-time horoscope</div>
+
+    <script>
+        const coin = document.getElementById('coin');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+            const { innerWidth, innerHeight } = window;
+
+            const xRatio = (clientX / innerWidth) - 0.5;
+            const yRatio = (clientY / innerHeight) - 0.5;
+
+            const rotateX = yRatio * 360; 
+            const rotateY = -xRatio * 360; 
+
+            coin.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+        });
+
+        coin.addEventListener('click', () => {
+            window.location.href = 'file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry6/entry6.html';
+        });
+    </script>
+</body>
+</html>
+
+
+
