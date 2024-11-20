@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Ching Visual</title>
+    <link rel="stylesheet" href="assets/entry11.css">
+</head>
+<body>
+    <video autoplay muted loop playsinline id="background-video">
+        <source src="assets/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/index.html" class="rotating-image">
+        <img src="assets/22.png" alt="Rotating Icon">
+    </a>
+
+    <header class="main-header">
+        <h1>I Ching Symbolism</h1>
+        <p>Discover the symbolic meanings of the Eight Trigrams.</p>
+    </header>
+
+    <main class="content">
+        <section class="symbols-grid">
+            <div class="symbol-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="symbol">☰</div>
+                        <div class="symbol-name">乾 Qián</div>
+                    </div>
+                    <div class="card-back">
+                        <p>Symbol: Heaven</p>
+                        <p>Represents creativity, strength, and leadership.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="symbol-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="symbol">☷</div>
+                        <div class="symbol-name">坤 Kūn</div>
+                    </div>
+                    <div class="card-back">
+                        <p>Symbol: Earth</p>
+                        <p>Represents receptivity, nurturing, and support.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="symbol-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="symbol">☳</div>
+                        <div class="symbol-name">震 Zhèn</div>
+                    </div>
+                    <div class="card-back">
+                        <p>Symbol: Thunder</p>
+                        <p>Represents action, movement, and vitality.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="symbol-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="symbol">☴</div>
+                        <div class="symbol-name">巽 Xùn</div>
+                    </div>
+                    <div class="card-back">
+                        <p>Symbol: Wind</p>
+                        <p>Represents flexibility and growth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="symbol-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="symbol">☵</div>
+                        <div class="symbol-name">坎 Kǎn</div>
+                    </div>
+                    <div class="card-back">
+                        <p>Symbol: Water</p>
+                        <p>Represents depth, wisdom, and emotion.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="symbol-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="symbol">☲</div>
+                        <div class="symbol-name">离 Lí</div>
+                    </div>
+                    <div class="card-back">
+                        <p>Symbol: Fire</p>
+                        <p>Represents clarity, passion, and energy.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="symbol-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="symbol">☶</div>
+                        <div class="symbol-name">艮 Gèn</div>
+                    </div>
+                    <div class="card-back">
+                        <p>Symbol: Mountain</p>
+                        <p>Represents stability and stillness.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="symbol-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <div class="symbol">☱</div>
+                        <div class="symbol-name">兑 Duì</div>
+                    </div>
+                    <div class="card-back">
+                        <p>Symbol: Lake</p>
+                        <p>Represents joy, pleasure, and reflection.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        document.querySelectorAll('.symbol-card').forEach(card => {
+            card.addEventListener('click', () => {
+                card.classList.toggle('flipped');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
