@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="icon" href="assets/22.png" type="image/png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>I Ching the Flower of Life</title>
-    <link rel="stylesheet" href="/Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry1/assets/entry1.css"> 
+    <link rel="stylesheet" href="assets/entry1.css"> 
 </head>
 <body>
-    <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/index/index.html" target="_blank">
-        <img src="/Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry1/assets/22.png" alt="Top Left Icon" class="top-left-icon">
+    <video autoplay muted loop id="background-video" preload="auto" playsinline class="background-video">
+        <source src="assets/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/index.html" target="_blank">
+        <img src="assets/22.png" alt="Top Left Icon" class="top-left-icon">
     </a>
     <div class="center-content">
         <h1>I Ching the Flower of Life</h1>
@@ -27,23 +32,42 @@
                 <select id="month">
                     <script>
                         for (let i = 1; i <= 12; i++) {
-                            document.write('<option value="' + i + '">' + i + '</option>');
+                            document.write('<option value="' + i + '</option>');
                         }
                     </script>
                 </select>
 
                 <label for="year" style="color: black;">Year:</label>
-                <input type="number" id="year">
+                <input type="number" id="year" class="input-field">
                 <button class="submit-button">✔</button>
             </div>
 
             <div class="input-box">
                 <label for="lucky-number" style="color: black;">Lucky number:</label>
-                <input type="number" id="lucky-number" placeholder="1-100">
+                <input type="number" id="lucky-number" class="input-field" placeholder="1-100">
                 <button class="submit-button">✔</button>
             </div>
         </div>
+
+        <div class="description">
+            After filling in the numbers, press the newline key,You will see different mandala flower patterns and interpretations
+        </div>
     </div>
+
+    <script>
+        document.addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                const links = [
+                    'file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry8/entry8.html',
+                    'file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry9/entry9.html'
+                ];
+                const randomLink = links[Math.floor(Math.random() * links.length)];
+                window.location.href = randomLink;
+            }
+        });
+    </script>
 </body>
 </html>
+
+
 

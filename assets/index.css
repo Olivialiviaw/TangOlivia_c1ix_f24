@@ -1,0 +1,129 @@
+body, html {
+    font-family: 'Georgia', serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto; /* 允许纵向滚动 */
+    text-align: center;
+    position: relative;
+    min-height: 100vh; /* 确保内容高度至少为视口高度 */
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.scroll-container {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+}
+
+.scrolling-image {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -100%;
+    }
+}
+
+.content {
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 50px;
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    margin-bottom: 20px;
+}
+
+/* 将第二排圆圈上移 */
+#second-row {
+    margin-top: -90px; /* 调整此值以控制向上移动的距离 */
+}
+
+.box {
+    position: relative;
+    padding: 20px;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.inner-circle {
+    position: relative;
+    width: 60%;
+    height: 60%;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-align: center;
+    padding: 10px;
+}
+
+.hexagram {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+}
+
+.box-content {
+    font-size: 1em;
+    margin: 0;
+}
+
+.box h3 {
+    font-size: 1.3em;
+    margin: 0;
+}
+
+a.box:hover {
+    text-decoration: none; 
+}
+
+.inner-circle {
+    transition: transform 0.3s ease;
+}
+
+.inner-circle:hover {
+    transform: scale(1.2); 
+}
+

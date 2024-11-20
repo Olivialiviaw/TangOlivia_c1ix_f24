@@ -1,0 +1,167 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Georgia', serif;
+    text-align: center;
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.top-left-icon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 30px; 
+    height: auto;
+    cursor: pointer;
+    animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.outside-title {
+    font-size: 2.5rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.meditation-section {
+    background-color: rgba(255, 255, 255, 0.4); 
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    color: rgb(247, 243, 243); 
+}
+
+.meditation-section h2, 
+.meditation-section p, 
+.meditation-instructions,
+.hexagram-symbol {
+    background: linear-gradient(45deg, #FF6B6B, #FFD93D, #6BCB77, #4D96FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.meditation-section p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.hexagram-symbol {
+    font-size: 4rem;
+    margin: 20px 0;
+    animation: pulse 2s infinite;
+}
+
+.meditation-button {
+    background-color: rgba(251, 247, 247, 0.613); 
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    color: rgb(201, 243, 95);
+    transition: background-color 0.3s ease;
+}
+
+.meditation-button:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.summary-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.summary-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: #000;
+    max-width: 400px;
+    width: 80%;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.summary-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s;
+}
+
+.close-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.audio-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.audio-icons img {
+    width: 20px; 
+    height: 20px; 
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.audio-icons img:hover {
+    transform: scale(1.2);
+}
+
+

@@ -2,12 +2,16 @@ body {
     font-family: Georgia, serif;
     background-color: #D5C8E8;
     color: #fff;
-    text-align: center;
+    margin: 0;
+    padding: 0;
     position: relative;
 }
 
 .container {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .title {
@@ -21,26 +25,22 @@ body {
 }
 
 .card {
-    position: relative;
+    display: flex;
+    justify-content: center;
     background-color: #FFD700;
     width: 250px;
     height: 350px;
-    margin: 0 auto;
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-    z-index: 1;
+    position: relative;
+    cursor: pointer;
 }
 
-.card img.card-image {
-    position: absolute;
-    top: 53%;
-    left: 50%;
+.card-image {
     width: 80%;
     height: auto;
-    transform: translate(-50%, -50%);
-    z-index: 2;
 }
 
 .overlay-container {
@@ -49,26 +49,44 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    pointer-events: none; 
+    z-index: 9999;
+    pointer-events: none;
 }
 
-.overlay-container img.overlay-image {
-    width: 50%;
-    height: auto;
+.card:hover ~ .overlay-container {
+    display: flex;
+}
+
+.overlay-container img {
+    width: 700px;
+    height: 700px;
     object-fit: contain;
-    opacity: 0.8;
-    transform: translateY(-12%);
+    margin-top: -165px;
+}
+
+.card-description {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1rem;
+    color: white;
+    line-height: 1.5;
 }
 
 .footer {
     margin-top: 60px;
+    text-align: center;
     display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    gap: 40px; 
+}
+
+.footer-card-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-card {
@@ -82,8 +100,6 @@ body {
     overflow: hidden;
     text-align: center;
     transition: box-shadow 0.3s ease;
-    position: relative;
-    z-index: 5; 
 }
 
 .footer-card:hover {
@@ -95,14 +111,19 @@ body {
     height: auto;
     object-fit: cover;
     border-radius: 10px;
-    z-index: 5;
+}
+
+.footer-description {
+    margin-top: 10px; 
+    font-size: 0.9rem;
+    color: white;
 }
 
 .logo {
     position: absolute;
     top: 20px;
     left: 20px;
-    z-index: 5; 
+    z-index: 5;
 }
 
 .logo img {
@@ -119,5 +140,9 @@ body {
         transform: rotate(360deg);
     }
 }
+
+
+
+
 
 

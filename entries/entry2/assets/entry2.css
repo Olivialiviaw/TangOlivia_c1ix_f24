@@ -1,23 +1,28 @@
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; 
+}
 body {
     font-family: Georgia, serif;
-    background: linear-gradient(to bottom, #87CEEB, #FFFFFF); 
-    position: relative;
-    text-align: center;
     color: #fff; 
     height: 100vh;
-    overflow: hidden;
     margin: 0;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
-
 .title {
     font-size: 2em;
     margin-bottom: 20px;
 }
-
 .instruction {
     font-size: 1em;
     margin-bottom: 20px;
@@ -26,10 +31,10 @@ body {
 #coin {
     width: 200px;
     height: 200px;
-    background: url('/Users/olivialiviaw/Desktop/Tang_c1ix_f24/entries/entry2/assets/未命名作品 35.png') no-repeat center center;
-    background-size: contain;
     transform-origin: center;
     transition: transform 0.1s ease-out;
+    position: relative; 
+    z-index: 9999; 
 }
 
 .top-left-icon {
@@ -50,3 +55,4 @@ body {
         transform: rotate(360deg);
     }
 }
+
