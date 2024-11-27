@@ -7,18 +7,13 @@
     <link rel="stylesheet" href="assets/entry10.css">
 </head>
 <body>
-    <!-- Background Video -->
     <video autoplay muted loop class="background-video">
         <source src="assets/background.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
-    <!-- Small Rotating Icon in the Top Left Corner -->
-    <a href="file:///Users/olivialiviaw/Desktop/Tang_c1ix_f24/index.html" target="_blank">
+    <a href="https://olivialiviaw.github.io/TangOlivia_c1ix_f24/index.html" target="_blank">
         <img src="assets/22.png" alt="Top Left Icon" class="top-left-icon">
     </a>
-
-    <!-- Title placed outside the main box -->
     <h2 class="outside-title">I Ching Meditation</h2>
 
     <div class="meditation-section" id="meditation-section">
@@ -30,14 +25,12 @@
             Focus on the symbolic meaning of the hexagram, breathe deeply, and feel the calmness it brings to your mind.
         </p>
 
-        <!-- Timer display and stop button (hidden initially) -->
         <div id="timer-container" style="display: none;">
             <p id="timer">00:00</p>
             <button class="meditation-button stop-button" onclick="stopMeditation()">Stop Meditation</button>
         </div>
     </div>
 
-    <!-- Summary overlay (hidden initially) -->
     <div id="summary-overlay" class="summary-overlay" style="display: none;">
         <div class="summary-content">
             <button class="close-button" onclick="closeSummary()">X</button>
@@ -45,21 +38,19 @@
         </div>
     </div>
 
-    <!-- Audio files -->
     <audio id="audio1" src="assets/1.mp3"></audio>
     <audio id="audio2" src="assets/2.mp3"></audio>
     <audio id="audio3" src="assets/3.mp3"></audio>
 
     <script>
-        let currentAudio = null; // Track the currently playing audio
-        let timerInterval; // Store the timer interval
-        let secondsElapsed = 0; // Track elapsed time in seconds
+        let currentAudio = null; 
+        let timerInterval; 
+        let secondsElapsed = 0; 
 
         function startMeditation() {
             const instructions = document.getElementById('meditation-instructions');
             instructions.innerText = "Close your eyes, focus on your breathing, and let each breath bring peace and balance. Feel the energy of the hexagram and meditate on its symbolism to find inspiration and tranquility within.";
 
-            // Show timer and stop button, reset timer
             document.getElementById('timer-container').style.display = 'block';
             secondsElapsed = 0;
             updateTimer();
@@ -68,7 +59,6 @@
                 updateTimer();
             }, 1000);
 
-            // Randomly select and play one of the audio files
             const audioOptions = [document.getElementById('audio1'), document.getElementById('audio2'), document.getElementById('audio3')];
             if (currentAudio) {
                 currentAudio.pause();
@@ -76,23 +66,19 @@
             }
             currentAudio = audioOptions[Math.floor(Math.random() * audioOptions.length)];
 
-            // Check if audio can play
             currentAudio.play().catch(error => {
                 console.error("Audio playback failed:", error);
             });
         }
 
         function stopMeditation() {
-            // Stop the timer
             clearInterval(timerInterval);
 
-            // Stop any playing audio
             if (currentAudio) {
                 currentAudio.pause();
                 currentAudio.currentTime = 0;
             }
 
-            // Show summary overlay with meditation time
             const minutes = Math.floor(secondsElapsed / 60);
             const seconds = secondsElapsed % 60;
             document.getElementById('summary-text').innerText = `You meditated for ${minutes}:${seconds < 10 ? '0' : ''}${seconds} and found peace within.`;

@@ -3,10 +3,10 @@ body, html {
     color: white;
     margin: 0;
     padding: 0;
-    overflow-y: auto; /* 允许纵向滚动 */
+    overflow-y: auto; 
     text-align: center;
     position: relative;
-    min-height: 100vh; /* 确保内容高度至少为视口高度 */
+    min-height: 100vh; 
 }
 
 .background-video {
@@ -66,9 +66,8 @@ body, html {
     margin-bottom: 20px;
 }
 
-/* 将第二排圆圈上移 */
 #second-row {
-    margin-top: -90px; /* 调整此值以控制向上移动的距离 */
+    margin-top: -90px; 
 }
 
 .box {
