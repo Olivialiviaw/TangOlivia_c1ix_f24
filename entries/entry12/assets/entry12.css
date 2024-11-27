@@ -76,13 +76,11 @@ header h1 {
     }
 }
 
-/* Hover effect for images 3-9 */
 .overlay-image:hover {
     transform: translateX(-50%) translateY(30%) scale(1.2);
     opacity: 0.9;
 }
 
-/* Circle and text container for 3.png */
 .circle-text-container {
     position: fixed;
     top: 20%;
@@ -106,7 +104,6 @@ header h1 {
     display: flex;
 }
 
-/* Circle and text container for 4.png */
 .circle-text-container-indigo {
     position: fixed;
     top: 20%;
@@ -130,124 +127,119 @@ header h1 {
     display: flex;
 }
 
-/* Circle and text container for 5.png */
 .circle-text-container-throat {
     position: fixed;
     top: 20%;
     left: 5%;
     width: 300px;
     height: 300px;
-    background-color: rgba(0, 255, 255, 0.2); /* Cyan with lower opacity */
+    background-color: rgba(0, 255, 255, 0.2); 
     border-radius: 50%;
-    display: none; /* Hidden by default */
+    display: none; 
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    color: rgb(6, 164, 164); /* Cyan text color */
+    color: rgb(6, 164, 164); 
     font-size: 1em;
     line-height: 1.5;
     z-index: 1000;
 }
 
 .image-5:hover ~ .circle-text-container-throat {
-    display: flex; /* Show the circle and text on hover */
+    display: flex; 
 }
 
-/* Circle and text container for 6.png */
 .circle-text-container-heart {
     position: fixed;
-    top: 20%; /* 距顶部位置 */
-    right: 5%; /* 调整到右边 */
-    width: 300px; /* 圆圈宽度 */
-    height: 300px; /* 圆圈高度 */
-    background-color: rgba(0, 128, 0, 0.2); /* 半透明绿色背景 */
-    border-radius: 50%; /* 圆形样式 */
-    display: none; /* 默认隐藏 */
+    top: 20%; 
+    right: 5%; 
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 128, 0, 0.2);
+    border-radius: 50%;
+    display: none; 
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    color: green; /* 文字颜色为绿色 */
+    color: green; 
     font-size: 1em;
     line-height: 1.5;
-    z-index: 1000; /* 确保在最前方 */
+    z-index: 1000; 
 }
 
 .image-6:hover ~ .circle-text-container-heart {
-    display: flex; /* 鼠标悬停时显示 */
+    display: flex; 
 }
 
-/* Circle and text container for 7.png */
 .circle-text-container-solar {
     position: fixed;
-    top: 20%; /* 距顶部位置 */
-    left: 5%; /* 调整到左边 */
-    width: 300px; /* 圆圈宽度 */
-    height: 300px; /* 圆圈高度 */
-    background-color: rgba(255, 255, 0, 0.2); /* 半透明黄色背景 */
-    border-radius: 50%; /* 圆形样式 */
-    display: none; /* 默认隐藏 */
+    top: 20%;
+    left: 5%;
+    width: 300px; 
+    height: 300px; 
+    background-color: rgba(255, 255, 0, 0.2); 
+    border-radius: 50%; 
+    display: none; 
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    color: rgb(168, 168, 46); /* 文字颜色为黄色 */
+    color: rgb(168, 168, 46); 
     font-size: 1em;
     line-height: 1.5;
-    z-index: 1000; /* 确保在最前方 */
+    z-index: 1000; 
 }
 
 .image-7:hover ~ .circle-text-container-solar {
-    display: flex; /* 鼠标悬停时显示 */
+    display: flex; 
 }
 
-/* Circle and text container for 8.png */
 .circle-text-container-sacral {
     position: fixed;
-    top: 20%; /* 距顶部位置 */
-    right: 5%; /* 调整到右边 */
-    width: 300px; /* 圆圈宽度 */
-    height: 300px; /* 圆圈高度 */
-    background-color: rgba(255, 165, 0, 0.2); /* 半透明橙色背景 */
-    border-radius: 50%; /* 圆形样式 */
-    display: none; /* 默认隐藏 */
+    top: 20%;
+    right: 5%; 
+    width: 300px; 
+    height: 300px; 
+    background-color: rgba(255, 165, 0, 0.2); 
+    border-radius: 50%; 
+    display: none; 
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    color: rgb(203, 135, 10); /* 文字颜色为橙色 */
+    color: rgb(203, 135, 10); 
     font-size: 1em;
     line-height: 1.5;
-    z-index: 1000; /* 确保在最前方 */
+    z-index: 1000; 
 }
 
 .image-8:hover ~ .circle-text-container-sacral {
-    display: flex; /* 鼠标悬停时显示 */
+    display: flex; 
 }
 
-/* Circle and text container for 9.png */
 .circle-text-container-root {
     position: fixed;
-    top: 20%; /* 距顶部位置 */
-    left: 5%; /* 调整到左边 */
-    width: 300px; /* 圆圈宽度 */
-    height: 300px; /* 圆圈高度 */
-    background-color: rgba(255, 0, 0, 0.2); /* 半透明红色背景 */
+    top: 20%; 
+    left: 5%; 
+    width: 300px; 
+    height: 300px; 
+    background-color: rgba(255, 0, 0, 0.2); 
     border-radius: 50%;
-    display: none; /* 默认隐藏 */
+    display: none; 
     justify-content: center;
     align-items: center;
     text-align: center;
     padding: 20px;
-    color: red; /* 文字颜色为红色 */
+    color: red; 
     font-size: 1em;
     line-height: 1.5;
-    z-index: 1000; /* 确保在最前方 */
+    z-index: 1000; 
 }
 
 .image-9:hover ~ .circle-text-container-root {
-    display: flex; /* 鼠标悬停时显示 */
+    display: flex; 
 }
 
 footer {
