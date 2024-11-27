@@ -1,0 +1,272 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d1e8d1;
+    color: #333;
+    overflow-x: hidden;
+    margin-top: -20px;
+}
+
+header {
+    text-align: center;
+    padding: 2em 0;
+    background-color: #d1e8d1;
+    color: #333;
+}
+
+header h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.image-container {
+    position: relative;
+    width: 85%;
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+.center-image {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    top: 30%;
+}
+
+.overlay-image {
+    position: absolute;
+    left: 49%;
+    transform: translateX(-50%) translateY(30%);
+    width: 4%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.overlay-image[src="2.png"] {
+    width: 7%;
+    height: auto;
+}
+
+.image-3 { top: -10%; }
+.image-4 { top: 1%; }
+.image-5 { top: 15%; }
+.image-6 { top: 30%; }
+.image-7 { top: 55%; }
+.image-8 { top: 65%; }
+.image-9 { top: 75%; }
+
+.rotating-image {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 50px;
+    height: auto;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hover effect for images 3-9 */
+.overlay-image:hover {
+    transform: translateX(-50%) translateY(30%) scale(1.2);
+    opacity: 0.9;
+}
+
+/* Circle and text container for 3.png */
+.circle-text-container {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(128, 0, 128, 0.2);
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: purple;
+    font-size: 1em;
+    line-height: 1.5;
+    z-index: 1000;
+}
+
+.image-3:hover ~ .circle-text-container {
+    display: flex;
+}
+
+/* Circle and text container for 4.png */
+.circle-text-container-indigo {
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(75, 0, 130, 0.2);
+    border-radius: 50%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: indigo;
+    font-size: 1em;
+    line-height: 1.5;
+    z-index: 1000;
+}
+
+.image-4:hover ~ .circle-text-container-indigo {
+    display: flex;
+}
+
+/* Circle and text container for 5.png */
+.circle-text-container-throat {
+    position: fixed;
+    top: 20%;
+    left: 5%;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(0, 255, 255, 0.2); /* Cyan with lower opacity */
+    border-radius: 50%;
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: rgb(6, 164, 164); /* Cyan text color */
+    font-size: 1em;
+    line-height: 1.5;
+    z-index: 1000;
+}
+
+.image-5:hover ~ .circle-text-container-throat {
+    display: flex; /* Show the circle and text on hover */
+}
+
+/* Circle and text container for 6.png */
+.circle-text-container-heart {
+    position: fixed;
+    top: 20%; /* 距顶部位置 */
+    right: 5%; /* 调整到右边 */
+    width: 300px; /* 圆圈宽度 */
+    height: 300px; /* 圆圈高度 */
+    background-color: rgba(0, 128, 0, 0.2); /* 半透明绿色背景 */
+    border-radius: 50%; /* 圆形样式 */
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: green; /* 文字颜色为绿色 */
+    font-size: 1em;
+    line-height: 1.5;
+    z-index: 1000; /* 确保在最前方 */
+}
+
+.image-6:hover ~ .circle-text-container-heart {
+    display: flex; /* 鼠标悬停时显示 */
+}
+
+/* Circle and text container for 7.png */
+.circle-text-container-solar {
+    position: fixed;
+    top: 20%; /* 距顶部位置 */
+    left: 5%; /* 调整到左边 */
+    width: 300px; /* 圆圈宽度 */
+    height: 300px; /* 圆圈高度 */
+    background-color: rgba(255, 255, 0, 0.2); /* 半透明黄色背景 */
+    border-radius: 50%; /* 圆形样式 */
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: rgb(168, 168, 46); /* 文字颜色为黄色 */
+    font-size: 1em;
+    line-height: 1.5;
+    z-index: 1000; /* 确保在最前方 */
+}
+
+.image-7:hover ~ .circle-text-container-solar {
+    display: flex; /* 鼠标悬停时显示 */
+}
+
+/* Circle and text container for 8.png */
+.circle-text-container-sacral {
+    position: fixed;
+    top: 20%; /* 距顶部位置 */
+    right: 5%; /* 调整到右边 */
+    width: 300px; /* 圆圈宽度 */
+    height: 300px; /* 圆圈高度 */
+    background-color: rgba(255, 165, 0, 0.2); /* 半透明橙色背景 */
+    border-radius: 50%; /* 圆形样式 */
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: rgb(203, 135, 10); /* 文字颜色为橙色 */
+    font-size: 1em;
+    line-height: 1.5;
+    z-index: 1000; /* 确保在最前方 */
+}
+
+.image-8:hover ~ .circle-text-container-sacral {
+    display: flex; /* 鼠标悬停时显示 */
+}
+
+/* Circle and text container for 9.png */
+.circle-text-container-root {
+    position: fixed;
+    top: 20%; /* 距顶部位置 */
+    left: 5%; /* 调整到左边 */
+    width: 300px; /* 圆圈宽度 */
+    height: 300px; /* 圆圈高度 */
+    background-color: rgba(255, 0, 0, 0.2); /* 半透明红色背景 */
+    border-radius: 50%;
+    display: none; /* 默认隐藏 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: red; /* 文字颜色为红色 */
+    font-size: 1em;
+    line-height: 1.5;
+    z-index: 1000; /* 确保在最前方 */
+}
+
+.image-9:hover ~ .circle-text-container-root {
+    display: flex; /* 鼠标悬停时显示 */
+}
+
+footer {
+    text-align: center;
+    background-color: #d1e8d1;
+    padding: 20px;
+    position: fixed;
+    bottom: 30px;
+    width: 96%;
+}
+
+.footer-text {
+    color: black;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+
+
