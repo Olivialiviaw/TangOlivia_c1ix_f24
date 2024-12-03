@@ -25,6 +25,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const coin = document.getElementById('coin');
+            let isFirstClick = true;
 
             document.addEventListener('mousemove', (e) => {
                 const { clientX, clientY } = e;
@@ -40,13 +41,18 @@
             });
 
             coin.addEventListener('click', () => {
-                const urls = [
-                    'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry6/entry6.html',
-                    'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry13/entry13.html'
-                ];
-                const randomIndex = Math.floor(Math.random() * urls.length);
-                const selectedUrl = urls[randomIndex];
-                window.location.href = selectedUrl;
+                if (isFirstClick) {
+                    isFirstClick = false;
+                    window.location.href = 'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry13/entry13.html';
+                } else {
+                    const urls = [
+                        'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry6/entry6.html',
+                        'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry13/entry13.html'
+                    ];
+                    const randomIndex = Math.floor(Math.random() * urls.length);
+                    const selectedUrl = urls[randomIndex];
+                    window.location.href = selectedUrl;
+                }
             });
         });
     </script>
