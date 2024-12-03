@@ -39,11 +39,14 @@
         });
 
         coin.addEventListener('click', () => {
-            window.location.href = 'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry6/entry6.html';
+            const urls = [
+                'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry6/entry6.html',
+                'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry13/entry13.html'
+            ];
+            const randomIndex = Math.floor(Math.random() * urls.length);
+            const selectedUrl = urls[randomIndex];
+            window.location.href = selectedUrl;
         });
     </script>
 </body>
 </html>
-
-
-
