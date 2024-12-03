@@ -23,30 +23,33 @@
     <div class="instruction">You will see real-time horoscope</div>
 
     <script>
-        const coin = document.getElementById('coin');
+        document.addEventListener('DOMContentLoaded', () => {
+            const coin = document.getElementById('coin');
 
-        document.addEventListener('mousemove', (e) => {
-            const { clientX, clientY } = e;
-            const { innerWidth, innerHeight } = window;
+            document.addEventListener('mousemove', (e) => {
+                const { clientX, clientY } = e;
+                const { innerWidth, innerHeight } = window;
 
-            const xRatio = (clientX / innerWidth) - 0.5;
-            const yRatio = (clientY / innerHeight) - 0.5;
+                const xRatio = (clientX / innerWidth) - 0.5;
+                const yRatio = (clientY / innerHeight) - 0.5;
 
-            const rotateX = yRatio * 360; 
-            const rotateY = -xRatio * 360; 
+                const rotateX = yRatio * 360; 
+                const rotateY = -xRatio * 360; 
 
-            coin.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-        });
+                coin.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
 
-        coin.addEventListener('click', () => {
-            const urls = [
-                'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry6/entry6.html',
-                'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry13/entry13.html'
-            ];
-            const randomIndex = Math.floor(Math.random() * urls.length);
-            const selectedUrl = urls[randomIndex];
-            window.location.href = selectedUrl;
+            coin.addEventListener('click', () => {
+                const urls = [
+                    'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry6/entry6.html',
+                    'https://olivialiviaw.github.io/TangOlivia_c1ix_f24/entries/entry13/entry13.html'
+                ];
+                const randomIndex = Math.floor(Math.random() * urls.length);
+                const selectedUrl = urls[randomIndex];
+                window.location.href = selectedUrl;
+            });
         });
     </script>
 </body>
 </html>
+
